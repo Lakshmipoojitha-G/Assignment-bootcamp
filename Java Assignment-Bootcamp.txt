@@ -1,0 +1,77 @@
+Single level:
+
+class Tree{
+    void leaves(){
+        System.out.println("It looks green");
+    }
+}
+class Main extends Tree{
+    public static void main(String[]args){
+        Main obj=new Main();
+        obj.leaves();
+    }
+}
+   
+
+Hierarichal:
+
+ class library{
+    void book(){
+        System.out.println("It is story book");
+    }
+}
+class Wood extends library{
+    void Tables(){
+        System.out.println("It is a non living material");
+    }
+}
+class Wifi extends library{
+    void signals(){
+        System.out.println("It provides Internet");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Wifi wifi=new Wifi();
+        wifi.signals();
+        wifi.book();
+     Wood wood=new Wood();
+        wood.Tables();
+        wood.book();
+    }
+}
+
+Multi-Level:
+class Tree{
+    void Shelter(){
+        System.out.println("It gives Shelter");
+    }
+}
+class Branches extends Tree{
+    void Brown(){
+        System.out.println("It looks Brown");
+    }
+}
+class Leaves extends Tree{
+    void Green(){
+        System.out.println("It looks Green");
+    }
+}
+class Flowers extends Tree{
+    void Fruits(){
+        System.out.println("It gives Fruits");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Flowers flowers=new Flowers();
+        flowers.Fruits();
+        flowers.Shelter();
+    Leaves leaves=new Leaves();
+        leaves.Green();
+        leaves.Shelter();
+    Branches branches=new Branches();
+        branches.Brown();
+        branches.Shelter();
+    }
+}
